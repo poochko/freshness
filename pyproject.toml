@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "poochko-freshness"
+version = "0.1.0"
+description = "依据文档声明的生效时间、截止时间与正文中的时效词，推断每篇文档的过期风险"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "poochko" }]
+keywords = ["cli", "analysis", "observability", "evaluation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://poochko.github.io"
+Repository = "https://github.com/poochko/freshness"
+Issues = "https://github.com/poochko/freshness/issues"
+
+[project.scripts]
+freshness = "freshness:main"
+
+[tool.setuptools]
+py-modules = ["freshness"]
